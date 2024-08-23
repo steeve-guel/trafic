@@ -1,0 +1,44 @@
+<section class="custom-container">
+  <h1>Surveillance du trafic</h1>
+
+  <section>
+    <!--Emplacement final-->
+    <div class="input-formfield">
+      <label class="ang-label" for="email">Emplacement</label>
+      <input
+        type="email"
+        id="email-id"
+        name="email-id"
+        class="input__email"
+        placeholder="Emplacement"
+        required=""
+      />
+    </div>
+
+    <!--button-->
+    <div>
+      <button (click)="getRouteFromApi()" type="submit">Continuer</button>
+    </div>
+  </section>
+
+  <div class="custom-block">
+    <h3>Information sur le trafic</h3>
+    <p>Condition de circulation actuelle : </p>
+  </div>
+
+  @if(!!traficInfo){
+  <div class="itineraire-prevue">
+
+    <p>Niveau de la congestion : {{ traficInfo.congestion }} %</p>
+    <p>Vitesse moyenne : {{ traficInfo.speed }} km/h</p>
+    <p>Incidents:</p>
+    <ul>
+      @for (item of traficInfo.incidents; track $index) {
+        <li>{{item.type}} - {{item.location}}</li>
+      }
+    </ul>
+  </div>
+
+  }
+  <app-carte />
+</section>

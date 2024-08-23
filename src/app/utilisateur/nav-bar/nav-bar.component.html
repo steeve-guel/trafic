@@ -1,0 +1,33 @@
+<header class="mat-elevation-z2">
+  <section class="tete">
+      <div style="display: flex;align-items: center;justify-content: center;">
+          <div class="bx bx-menu" (click)="menu()" id="menu-icon"><svg class="nav-svg-icon" xmlns="http://www.w3.org/2000/svg" height="28"
+              viewBox="0 -960 960 960" width="28">
+              <path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" />
+          </svg></div>
+          <a href="/" class="logo">
+              <span style="align-items: center;display: flex;">SAD
+              <hr style="width: 1px;border: none; background: #ffb703; height: 36px; display: inline-block;margin:0 4px;" >
+              <small style="color: #6c757d;font-size: 10px;"><strong style="color: black;">GESTION</strong> <br>  des congestions</small>
+          </span>
+
+          </a>
+      </div>
+
+
+      <ul class="nav-bar">
+          <li><a routerLink="/user-trafic-gestion/acceuil" routerLinkActive="active">Acceuil</a></li>
+          <li><a routerLink="/user-trafic-gestion/itineraire" routerLinkActive="active">Planification d'itinéraire</a></li>
+          <li><a routerLink="/user-trafic-gestion/trafic-monitoring" routerLinkActive="active">Surveillance du trafic</a></li>
+          <li><a routerLink="/user-trafic-gestion/notifications" routerLinkActive="active">Notifications</a></li>
+          <li><a routerLink="/user-trafic-gestion/configuration" routerLinkActive="active">Configuration du systyème</a></li>
+
+      </ul>
+
+      <div class="main">
+          <a routerLink="/login" class="user mat-elevation-z1">Se connecter</a>
+          <a routerLink="/register" class="mat-elevation-z1 inscription">S'inscrire</a>
+          <a hidden style="cursor: pointer;" (click)="logout()">Logout</a>
+      </div>
+  </section>
+</header>

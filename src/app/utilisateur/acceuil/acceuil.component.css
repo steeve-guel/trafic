@@ -1,0 +1,89 @@
+.custom-container{
+  padding-block: 22px;
+  padding-inline: 10%;
+}
+
+.custom-content{
+  padding: 42px 24px;
+  background: #c1c1c15b;
+  border-radius: 4px;
+
+}
+
+.custom-content h1{
+  letter-spacing: 1px;
+  font-weight: 300 !important;
+  font-size: clamp(1.5rem,3vw,3rem);
+}
+
+.custom-text-01{
+  margin-block-start: 14px;
+  padding-block-end: 34px;
+  border-bottom: 1px solid #c1c1c1;
+  font-size: 1.2rem;
+  font-weight: 300 !important;
+}
+
+.custom-text-02{
+  margin-block-start: 24px;
+}
+
+.custom-grid-03{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 34px;
+  margin-block: 34px;
+}
+
+.custom-grid-03 div{
+  padding: 12px 34px;
+  border: 1px solid #c1c1c1;
+  border-radius: 4px;
+}
+
+.custom-grid-03 div p{
+  word-spacing: 2px;
+  margin-block: 10px;
+  font-weight: 300;
+}
+
+
+/**bouton */
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 15px;
+  gap: 15px;
+  background-color: #007ACC;
+  outline: 3px #007ACC solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.button .text {
+  color: #fff ;
+  font-weight: 700;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+.button svg path {
+  transition: 400ms;
+}
+
+.button:hover {
+  background-color: transparent;
+}
+
+.button:hover .text {
+  color: #007ACC;
+}
+
+.button:hover svg path {
+  fill: #007ACC;
+}

@@ -1,0 +1,162 @@
+
+header .tete {
+  background: #fff;
+  position: relative;
+  width: 100%;
+
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  transition: all .50s ease;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.nav-svg-icon {
+  cursor: pointer;
+}
+
+.logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.logo span {
+  color: var(--nav-text-logo-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+
+}
+
+.bx-menu{
+
+  margin-right: 5px;
+}
+
+.nav-bar {
+  display: flex;
+}
+
+.nav-bar a {
+  color: var(--nav-text-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 5px 0;
+  margin: 0 30px;
+  transition: all .50s ease;
+}
+
+.nav-bar a:hover {
+  color: var(--main-color);
+}
+
+.nav-bar a.active {
+  color: var(--main-color);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+}
+
+.main a {
+
+  padding: 6px;
+  border-radius: 4px;
+
+
+  color: var(--nav-text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all .50s ease;
+}
+
+.main  a.user {
+  background: #2a9d8f;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.main a.inscription{
+  background: var(--primary-color);
+  color: white;
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+.main a:hover {
+  fill: var(--main-color);
+  color: var(--main-color);
+
+}
+
+.main a .nav-svg-icon:hover {
+  fill: var(--main-color);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+#menu-icon {
+  z-index: 10001;
+  display: none;
+}
+
+@media(max-width:1280px) {
+  header .tete{
+      padding: 12px 2%;
+      transition: .2s;
+  }
+
+  .nav-bar a {
+      padding: 5px 0;
+      margin: 0 15px;
+  }
+}
+
+@media(max-width:1090px) {
+  #menu-icon {
+      display: block;
+  }
+  .nav-bar{
+      position: absolute;
+
+      top: 100%;
+      left: -100%;
+      width: 160px;
+      box-shadow: 1px 2px 6px rgb(165, 159, 159);
+      background: #fff;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all .50s ease;
+  }
+
+  .nav-bar a{
+      display: block;
+      margin: 16px 0;
+      padding: 0 25px;
+      transition: all .50s ease;
+  }
+
+  .nav-bar a:hover{
+      color: var(--nav-text-color);
+      transform: translateY(5px);
+  }
+
+  .nav-bar a.active{
+      color: var(--nav-text-color);
+  }
+
+  .nav-bar.open{
+      margin-top: 6px;
+      left: 2%;
+  }
+}
