@@ -18,7 +18,7 @@
         Planifiez votre trajet en fonction des conditions de circulation
         actuelles et prévues.
       </p>
-      <button class="button"><p class="text">Planifier l'itinéraire</p></button>
+      <button class="button" (click)="goItineraire()"><p class="text">Planifier l'itinéraire</p></button>
     </div>
     <div>
       <h3>Surveillance du trafic</h3>
@@ -26,7 +26,7 @@
         Surveillez les conditions de trafic en temps réel sur l'ensemble du
         réseau.
       </p>
-      <button class="button"><p class="text">Afficher le trafic</p></button>
+      <button class="button" (click)="goSurveillance()"><p class="text">Afficher le trafic</p></button>
     </div>
     <div>
       <h3>Avis de congestion</h3>
@@ -34,7 +34,7 @@
         Recevez des alertes sur les embouteillages et des itinéraires
         alternatifs suggérés.
       </p>
-      <button class="button">
+      <button class="button" (click)="goNofications()">
         <p class="text">Afficher les notifications</p>
       </button>
     </div>

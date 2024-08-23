@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-acceuil',
@@ -9,4 +10,19 @@ import { Component } from '@angular/core';
 })
 export class AcceuilComponent {
 
+  constructor(private router:Router){
+
+  }
+
+  goItineraire(){
+    this.router.navigate(['/user-trafic-gestion/itineraire']);
+  }
+
+  goSurveillance(){
+    this.router.navigate(['/user-trafic-gestion/trafic-monitoring']);
+  }
+
+  goNofications(){
+    this.router.navigate(['/user-trafic-gestion/notifications']);
+  }
 }

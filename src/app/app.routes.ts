@@ -5,9 +5,11 @@ import { ItineraireComponent } from './utilisateur/itineraire/itineraire.compone
 import { MonitoringComponent } from './utilisateur/monitoring/monitoring.component';
 import { ConfigurationComponent } from './utilisateur/configuration/configuration.component';
 import { NotificationsComponent } from './utilisateur/notifications/notifications.component';
+import { RegisterComponent } from './utilisateur/register/register.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'user-trafic-gestion', pathMatch: 'full' },
+  {path:'register',component:RegisterComponent},
   {
     path: 'user-trafic-gestion', component: TraficComponent, children: [
       { path: 'acceuil', component: AcceuilComponent },
