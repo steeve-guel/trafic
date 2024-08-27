@@ -6,10 +6,12 @@ import { MonitoringComponent } from './utilisateur/monitoring/monitoring.compone
 import { ConfigurationComponent } from './utilisateur/configuration/configuration.component';
 import { NotificationsComponent } from './utilisateur/notifications/notifications.component';
 import { RegisterComponent } from './utilisateur/register/register.component';
+import { LoginComponent } from './utilisateur/login/login.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'user-trafic-gestion', pathMatch: 'full' },
-  {path:'register',component:RegisterComponent},
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
   {
     path: 'user-trafic-gestion', component: TraficComponent, children: [
       { path: 'acceuil', component: AcceuilComponent },

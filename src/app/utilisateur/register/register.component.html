@@ -12,9 +12,14 @@
   </div>
   <!---->
   <div class="custom-form">
-    <h1>Inscription</h1>
 
-    <div style="display: grid;grid-template-columns: repeat(2,1fr);gap: 12px;">
+    <a class="pg-accueil" routerLink="/user-trafic-gestion/acceuil"><p class="text">Page d'accueil</p></a>
+
+    <h1 class="custom-form-title">Inscription</h1>
+
+    <div
+      style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px"
+    >
       <!--Nom final-->
       <div class="input-formfield">
         <label class="ang-label" for="email">Nom</label>
@@ -39,7 +44,6 @@
           required=""
         />
       </div>
-
     </div>
 
     <!--Email final-->
@@ -65,6 +69,29 @@
         placeholder="Telephone"
         required=""
       />
+    </div>
+    <!--Mot de passe final-->
+    <div class="input-formfield">
+      <label class="ang-label" for="email">Mot de passe</label>
+      <input
+        type="password"
+        id="email-id"
+        name="email-id"
+        class="input__email"
+        required=""
+      />
+    </div>
+
+    <!---->
+    <div>
+      <button class="button"><p class="text">S'inscrire</p></button>
+    </div>
+    <!----->
+    <div>
+      <p style="text-align: center; margin-block-start: 12px">
+        <small>Vous avez deja un compte ? </small>
+        <a routerLink="/login">Se connecter ici</a>
+      </p>
     </div>
   </div>
 </div>

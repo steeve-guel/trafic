@@ -1,0 +1,67 @@
+<div
+  style="
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    height: 100vh;
+    overflow: hidden;
+  "
+>
+  <!---->
+  <div>
+    <img src="/assets/img/pexels-pixabay-262100.jpg" alt="" />
+  </div>
+  <!---->
+  <div class="custom-form">
+
+    <a class="pg-accueil" routerLink="/user-trafic-gestion/acceuil"><p class="text">Page d'accueil</p></a>
+
+    <h1 class="custom-form-title">Connexion</h1>
+
+    <div
+      style="display: grid; grid-template-columns: 1fr; gap: 12px"
+    >
+      <!--Nom final-->
+      <div class="input-formfield">
+        <label class="ang-label" for="email">Email</label>
+        <input
+          type="email"
+          id="email-id"
+          name="email-id"
+          class="input__email"
+          placeholder="exemple@gmail.com"
+          required=""
+        />
+      </div>
+      <!--Prenom final-->
+      <div class="input-formfield">
+        <label class="ang-label" for="email">Mot de passe</label>
+        <input
+          type="password"
+          id="email-id"
+          name="email-id"
+          class="input__email"
+
+          required=""
+        />
+      </div>
+    </div>
+
+
+    <!---->
+    <div>
+      <button class="button"><p class="text">Se connecter</p></button>
+    </div>
+    <!----->
+    <div>
+      <p style="text-align: center; margin-block-start: 12px">
+        <small>Vous n'avez pas de compte ? </small>
+        <a routerLink="/register">S'inscrire ici</a>
+      </p>
+      <!---->
+      <p style="text-align: center; margin-block-start: 52px">
+        <small> </small>
+        <a routerLink="/">Mot de passe oublié ?</a>
+      </p>
+    </div>
+  </div>
+</div>

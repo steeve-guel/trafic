@@ -8,16 +8,6 @@ section {
   background-size: cover;
 }
 
-.pg-accueil .text{
-  background: #262626 !important;
-  width: fit-content;
-  padding: 4px 14px;
-  border-radius: 4px;
-  color: #fff;
-  margin-block-end: 12px;
- }
-
-
 .register-container {
   position: absolute;
   top: 50%;
@@ -83,7 +73,7 @@ section {
 }
 /** */
 .custom-form{
-  padding: 22px 34px;
+  padding: 62px 34px;
   /*  */
 }
 .custom-form-title{
@@ -159,6 +149,14 @@ button:hover {
   /* font-size: 1.5em; */
 }
 
+.pg-accueil .text{
+ background: #262626 !important;
+ width: fit-content;
+ padding: 12px 14px;
+ border-radius: 4px;
+ color: #fff;
+ margin-block-end: 12px;
+}
 
 @media only screen and (min-width: 1600px) {
   .register-container {
