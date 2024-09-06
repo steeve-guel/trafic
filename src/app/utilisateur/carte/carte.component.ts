@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { OpenStreetMapProvider,GeoSearchControl, SearchControl } from 'leaflet-geosearch';
+
+
 
 import * as L from 'leaflet';
 import 'leaflet-routing-machine';
@@ -13,7 +16,7 @@ import Geocoder from 'leaflet-control-geocoder';
 })
 export class CarteComponent {
 
-  ngAfterViewInit() {
+  async ngAfterViewInit() {
 
     let map = L.map('map').setView([51.505, -0.09], 13);
 
@@ -21,6 +24,8 @@ export class CarteComponent {
       maxZoom: 19,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+
+
 
     var polygon = L.polygon([
       [51.509, -0.08],
@@ -36,6 +41,28 @@ export class CarteComponent {
       routeWhileDragging: true
     }).addTo(map);
 
-    const geocoder = L.Control.Geocoder().addTo(map);
+    const provider = new OpenStreetMapProvider();
+
+    const search  = SearchControl({
+      provider: provider,
+      style: 'bar',
+      showMarker: true,
+      marker: {
+        // optional: L.Marker    - default L.Icon.Default
+        icon: new L.Icon.Default(),
+        draggable: false,
+      },
+      resultFormat: ({ result } : any) => result.label,
+      showPopup: true,
+      autoClose: true,
+      retainZoomLevel: false,
+      animateZoom: true,
+      keepResult: false,
+      searchLabel: 'Recherche'
+    });
+
+    map.addControl(search);
+    //const geocoder = L.Control.Geocoder().addTo(map);
+
   }
 }

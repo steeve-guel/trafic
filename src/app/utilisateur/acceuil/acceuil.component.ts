@@ -1,10 +1,11 @@
+import { CarteMapBoxComponent } from './../carte-map-box/carte-map-box.component';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-acceuil',
   standalone: true,
-  imports: [],
+  imports: [CarteMapBoxComponent],
   templateUrl: './acceuil.component.html',
   styleUrl: './acceuil.component.css'
 })

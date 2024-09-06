@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CarteComponent } from '../carte/carte.component';
+import { CarteMapBoxComponent } from '../carte-map-box/carte-map-box.component';
 
 @Component({
   selector: 'app-monitoring',
   standalone: true,
-  imports: [CarteComponent],
+  imports: [CarteComponent,CarteMapBoxComponent],
   templateUrl: './monitoring.component.html',
   styleUrl: './monitoring.component.css'
 })

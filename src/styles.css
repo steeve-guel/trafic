@@ -60,6 +60,7 @@ a{
 
 .leaflet-routing-container{
   background: #fff !important;
-  overflow: scroll;
-  width: 30%;
+  overflow-y: scroll;
+  width: 250px;
+  padding: 12px;
 }
