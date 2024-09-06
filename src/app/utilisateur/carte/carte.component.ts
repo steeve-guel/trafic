@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
 import * as L from 'leaflet';
-
+import 'leaflet-routing-machine';
+import 'leaflet-control-geocoder';
+import Geocoder from 'leaflet-control-geocoder';
 @Component({
   selector: 'app-carte',
   standalone: true,
@@ -24,6 +26,16 @@ export class CarteComponent {
       [51.509, -0.08],
       [51.503, -0.06],
       [51.51, -0.047]
-  ]).addTo(map);
+    ]).addTo(map);
+
+    const control = L.Routing.control({
+      waypoints: [
+        L.latLng(12.241851, -1.55676),
+        L.latLng(12.441851, -1.55676)
+      ],
+      routeWhileDragging: true
+    }).addTo(map);
+
+    const geocoder = L.Control.Geocoder().addTo(map);
   }
 }
